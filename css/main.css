@@ -1,0 +1,96 @@
+body, html{
+  margin:0;
+  padding:0;
+}
+/* Header Related Code */
+header{
+  width:100%;
+  background-color:white;
+  position:fixed;
+}
+nav{
+  width:46%;
+  float:right;
+  text-align:right;
+}
+button{
+  font-family: 'Merriweather Sans', sans-serif;
+}
+.header-title{
+  width:46%;
+  float:left;
+  margin-left:2%;
+  font-family: 'Raleway', sans-serif;
+  font-size:2.5em;
+}
+.header-link{
+  font-family: 'Merriweather Sans', sans-serif;
+  text-decoration:none;
+  color:black;
+  font-size:1.25em;
+  padding:1em;
+}
+.header-link:last-child{
+  margin-right:2%;
+}
+/*First Layer Code (For Home Page)*/
+.image-heading-sub{
+  width:100%;
+  height:50em;
+  background: url("../images/comp.jpg") center no-repeat fixed;
+}
+.image-heading{
+    font-family: 'Merriweather Sans', sans-serif;
+  color:black;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+/*Animations*/
+@keyframes headerlinkshift{
+  0%{
+    color:black;
+  }
+  100%{
+    background-color:black;
+    color:white;
+  }
+}
+@-webkit-keyframes headerlinkshift{
+  0%{
+    color:black;
+  }
+  100%{
+    background-color:black;
+    color:white;
+  }
+}
+/*Mobile Support*/
+@media screen and (min-width:0px) and (max-width:1016px){
+  .header-link.desktop{
+    display:none;
+  }
+  .header-title{
+    font-size:2em;
+  }
+  .header-link.mobile{
+    font-size:1em;
+    padding:0;
+    margin-right:10%;
+    padding:1em;
+    margin-top:-5%;
+    background-color:white;
+    border:2px solid #000000;
+  }
+  nav{
+    width:30%;
+  }
+}
+@media screen and (min-width:1017px) and (max-width:100000000000px){
+  .header-link.mobile{
+    display:none;
+  }
+  .header-link:hover{
+    animation-name:headerlinkshift;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+  }
+}
