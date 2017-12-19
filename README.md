@@ -1,1 +1,1 @@
-# seminole-design
+# Seminole-Design
